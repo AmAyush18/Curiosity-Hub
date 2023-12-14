@@ -44,6 +44,3 @@ Make sure you have Node.js and npm installed on your machine.
     ```
 
 5. Open your browser and navigate to http://localhost:3000 to see Curiosity-Hub in action.
-
-
-
