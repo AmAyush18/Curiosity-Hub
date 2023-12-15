@@ -8,6 +8,10 @@ import { styles } from '@/utils/styles';
 import PromptCard from '@/components/Prompts/PromptCard';
 import BestSellers from '@/components/Shop/BestSellers';
 import Future from '@/components/Route/Future';
+import Partners from '@/components/Route/Partners';
+import SellersBanner from '@/components/Shop/SellersBanner';
+import Footer from '@/components/Layout/Footer';
+import { Divider } from '@nextui-org/react';
 
 type Props = {}
 
@@ -59,6 +63,12 @@ const Page = (props: Props) => {
           <br />
           <BestSellers />
           <Future />
+          <Partners />
+          <SellersBanner />
+          <br />
+          <br />
+          <Divider className='bg-slate-700' />
+          <Footer />
         </div>
       </div>
     </div>

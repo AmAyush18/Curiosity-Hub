@@ -26,7 +26,7 @@ const Future = (props: Props) => {
                  Unleash creativity: Where ideas meet AI magic.
                 </h5>
                 <p className={`${styles.paragraph} pb-5`}>
-                    Your journey into tomorrow's visual wonders begins here, where innovation meets the limitless possibilities of GAN-powered imagination.                </p>
+                    Your journey into tomorrow&#39;s visual wonders begins here, where innovation meets the limitless possibilities of GAN-powered imagination.                </p>
             </div>
         </div>
     </div>
