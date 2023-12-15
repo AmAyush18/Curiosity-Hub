@@ -17,7 +17,7 @@ const About = (props: Props) => {
                 Empowering visionaries through AI-driven creativity.
             </h5>
             <p className={`${styles.paragraph} pb-5`}>
-                With cutting-edge AI technology at the core of our service, we empower individuals to craft tomorrow's images today. 
+                With cutting-edge AI technology at the core of our service, we empower individuals to craft tomorrow&#39;s images today. 
                 Join us on this journey as we unlock the full potential of your creativity, making the extraordinary accessible with the simplicity of our platform.
             </p>
             <Button className={`${styles.button} bg-emerald-400 font-[500] h-[45px]`}>
