@@ -1,5 +1,5 @@
 {
-  "name": "imagineers-mart",
+  "name": "curiosity-hub",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,9 @@
     "framer-motion": "^10.16.16",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.2",
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
     "@types/node": "^20",
