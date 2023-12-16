@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Ratings from '@/utils/Ratings';
 import Link from 'next/link';
+import examplePromptImage from '@/public/Images/ai-image-0.png';
 
 type Props = {}
 
@@ -11,11 +12,11 @@ const PromptCard = (props: Props) => {
   return (
     <Card 
         radius='lg'
-        className='w-full md:w-[31%] 2xl:w-[23%] p-4 bg-cyan-950 m-3'
+        className='w-full md:w-[27%] 2xl:w-[21%] p-4 bg-cyan-950 m-3'
     >   
         <div className="relative">
             <Image 
-                src={'https://pixner.net/aikeu/assets/images/banner/small-slider/four.png'}
+                src={examplePromptImage}
                 alt=''
                 className='w-full object-cover'
                 width={300}

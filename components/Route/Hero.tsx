@@ -3,44 +3,10 @@ import Image from 'next/image';
 import React from 'react';
 import line from '@/public/Assets/line.png';
 import MarQuee from 'react-fast-marquee';
+import { rowOneImages, rowTwoImages } from '@/utils/DisplayImages';
 
 type Props = {}
 
-const rowOneImages = [
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/large-slider/one.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/large-slider/two.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/large-slider/three.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/large-slider/four.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/large-slider/five.png",
-    },
-]
-
-const rowTwoImages = [
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/small-slider/one.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/small-slider/two.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/small-slider/three.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/small-slider/four.png",
-    },
-    {
-        url: "https://pixner.net/aikeu/assets/images/banner/small-slider/five.png",
-    },
-]
 
 const Hero = (props: Props) => {
   return (
@@ -66,10 +32,10 @@ const Hero = (props: Props) => {
                         {
                             rowOneImages.map((i, index) => (
                                 <Image 
-                                    src={i.url}
+                                    src={i.img}
                                     key={index}
                                     alt=''
-                                    className='md:m-4 w-[200px] m-2 md:w-[500px] rounded-[20px]'
+                                    className='md:m-4 w-[200px] h-[125px] m-2 md:w-[500px] md:h-[300px] rounded-[20px]'
                                     width={500}
                                     height={300}
                                 />
@@ -80,10 +46,10 @@ const Hero = (props: Props) => {
                         {
                             rowTwoImages.map((i, index) => (
                                 <Image 
-                                    src={i.url}
+                                    src={i.img}
                                     key={index}
                                     alt=''
-                                    className='md:m-4 w-[200px] m-2 md:w-[500px] rounded-[20px]'
+                                    className='md:m-4 w-[200px] h-[125px] m-2 md:w-[500px] md:h-[300px] rounded-[20px]'
                                     width={500}
                                     height={300}
                                 />

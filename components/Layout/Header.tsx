@@ -6,13 +6,13 @@ import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 // import { UserProfile } from "@clerk/nextjs";
-// import { User } from "@clerk/nextjs/server";
-// import DropDown from "./DropDown";
+import { User } from "@clerk/nextjs/server";
+import DropDown from "./DropDown";
 
 type Props = {
   activeItem: number;
-  user:  undefined;
-  isSellerExist: boolean | undefined;
+  user:  User | null;
+  isSellerExist: boolean;
 };
 
 const Header = ({ user, activeItem, isSellerExist }: Props) => {
@@ -43,7 +43,7 @@ const Header = ({ user, activeItem, isSellerExist }: Props) => {
 
   return (
     <div
-      className={`w-full p-5 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${
+      className={`w-full p-4 border-b min-h-[40px] border-b-[#ffffff32] transition-opacity ${
         active && "fixed top-0 left-0 bg-emerald-950 z-[9999]"
       }`}
     >
@@ -61,10 +61,22 @@ const Header = ({ user, activeItem, isSellerExist }: Props) => {
         <div className="flex items-center ml-10">
           <AiOutlineSearch className="text-[25px] mr-5 cursor-pointer" />
             {/* Todo authentication */}
-            <Link href="/sign-in">
-              <CgProfile className="text-[25px] cursor-pointer" />
-            </Link>
-         
+            {
+              user ? (
+                  <div className="">
+                    <DropDown 
+                      user={user}
+                      setOpen={setOpen}
+                      handleProfile={handleProfile}
+                      isSellerExist={isSellerExist}
+                    />
+                  </div>
+              ) : (
+                <Link href="/sign-in">
+                  <CgProfile className="text-[25px] cursor-pointer" />
+                </Link>
+              )
+            }
         </div>
       </div>
       {activeProfile && (
