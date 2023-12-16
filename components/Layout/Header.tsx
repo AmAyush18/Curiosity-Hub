@@ -5,7 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
-// import { UserProfile } from "@clerk/nextjs";
+import { UserProfile } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import DropDown from "./DropDown";
 
@@ -82,7 +82,7 @@ const Header = ({ user, activeItem, isSellerExist }: Props) => {
       {activeProfile && (
         <div className="w-full fixed h-screen overflow-hidden flex justify-center items-center top-0 left-0 bg-[#00000068] z-[9999]">
           <div className="w-min relative h-[90vh] overflow-y-scroll bg-white rounded-xl shadow">
-            {/* <UserProfile /> */}
+            <UserProfile />
             <RxCross1
               className="absolute text-black text-2xl top-10 right-10 cursor-pointer"
               onClick={handleProfile}
@@ -110,23 +110,26 @@ const Header = ({ user, activeItem, isSellerExist }: Props) => {
           />
         </div>
 
-        {open && (
+        { 
+        open && (
           <div
             className="fixed md:hidden w-full h-screen top-0 left-0 z-[99999] bg-[unset]"
             onClick={handleClose}
             id="screen"
           >
-            <div className="fixed bg-black h-screen top-0 right-0 w-[60%] z-[9999]">
+            <div className="fixed bg-cyan-950 h-screen top-0 right-0 w-[60%] z-[9999]">
               <div className="mt-20 p-5">
-                {/* <Navigation activeItem={activeItem} /> */}
-                {/* {user && (
-                  // <DropDown
-                  //   user={user}
-                  //   setOpen={setOpen}
-                  //   handleProfile={handleProfile}
-                  //   isSellerExist={isSellerExist}
-                  // />
-                )} */}
+                <Navigation activeItem={activeItem} />
+                {
+                  user && (
+                    <DropDown
+                      user={user}
+                      setOpen={setOpen}
+                      handleProfile={handleProfile}
+                      isSellerExist={isSellerExist}
+                    />
+                  )
+                }
               </div>
             </div>
           </div>
