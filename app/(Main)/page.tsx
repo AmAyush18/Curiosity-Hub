@@ -35,6 +35,7 @@ const Page = (props: Props) => {
     axios.get("/api/me")
     .then((res) => {
       setUser(res.data.user)
+      setIsSellerExist(res.data.shop ? true : false);
       setLoading(false);
     }).catch((error) => {
       console.log(error);
